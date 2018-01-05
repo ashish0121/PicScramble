@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_background_color"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/nav_bar_item_background"
+        android:visibility="visible" >
+
+        <TextView
+            android:id="@+id/search_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textSize="24dp"
+            android:textColor="@color/material_blue_grey_800"
+            android:text="@string/general_search"
+         />
+
+        <Button
+            android:id="@+id/buttonRestart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/accent_material_dark"
+            android:text="Restart"
+            android:textSize="12dp"
+            android:layout_margin="5dp"
+            android:onClick="restartGame"
+            android:clickable="true"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/search_view"
+            android:visibility="invisible"/>
+
+
+        <GridView
+            android:id="@+id/image_list_gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:cacheColorHint="@color/transparent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:fadingEdgeLength="1dip"
+            android:horizontalSpacing="3dp"
+            android:listSelector="@drawable/transparent_selector"
+            android:numColumns="3"
+            android:padding="20dp"
+            android:layout_below="@+id/buttonRestart"
+            android:verticalSpacing="3dp" >
+
+        </GridView>
+    </RelativeLayout>
+
+</LinearLayout>
